@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>خطة التسويق - MaxPrint كاسات PLA</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --green-dark: #1a6b3c;
+    --green-mid: #2d9b5a;
+    --green-light: #4dc87a;
+    --green-pale: #e8f7ee;
+    --gold: #d4a017;
+    --gold-light: #f5d96b;
+    --dark: #1a1a2e;
+    --gray: #6c757d;
+    --light: #f8f9fa;
+    --white: #ffffff;
+  }
+
+  body {
+    font-family: 'Cairo', 'Segoe UI', Tahoma, Arial, sans-serif;
+    background: #f0f4f0;
+    color: var(--dark);
+    direction: rtl;
+    text-align: right;
+  }
+
+  /* ===== COVER PAGE ===== */
+  .cover {
+    background: linear-gradient(145deg, var(--green-dark) 0%, var(--green-mid) 50%, var(--green-light) 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 40px;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 50%;
+  }
+  .cover::after {
+    content: '';
+    position: absolute;
+    bottom: -150px; left: -80px;
+    width: 500px; height: 500px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+  }
+
+  .cover-badge {
+    background: rgba(255,255,255,0.15);
+    border: 2px solid rgba(255,255,255,0.4);
+    color: white;
+    padding: 8px 28px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    backdrop-filter: blur(10px);
+  }
+
+  .cover-logo {
+    width: 110px; height: 110px;
+    background: white;
+    border-radius: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 35px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+  }
+
+  .cover-logo span {
+    font-size: 38px;
+    font-weight: 900;
+    color: var(--green-dark);
+    letter-spacing: -1px;
+  }
+
+  .cover h1 {
+    font-size: 52px;
+    font-weight: 900;
+    color: white;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.2);
+  }
+
+  .cover h1 span { color: var(--gold-light); }
+
+  .cover .subtitle {
+    font-size: 22px;
+    color: rgba(255,255,255,0.85);
+    font-weight: 400;
+    margin-bottom: 50px;
+  }
+
+  .cover-stats {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+
+  .cover-stat {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 18px;
+    padding: 20px 30px;
+    text-align: center;
+    min-width: 140px;
+  }
+
+  .cover-stat .num {
+    font-size: 30px;
+    font-weight: 900;
+    color: var(--gold-light);
+    display: block;
+  }
+
+  .cover-stat .lbl {
+    font-size: 12px;
+    color: rgba(255,255,255,0.8);
+    margin-top: 4px;
+    display: block;
+  }
+
+  .cover-divider {
+    width: 80px; height: 3px;
+    background: linear-gradient(to left, var(--gold-light), transparent);
+    margin: 30px auto;
+    border-radius: 2px;
+  }
+
+  .cover-meta {
+    color: rgba(255,255,255,0.7);
+    font-size: 13px;
+  }
+
+  /* ===== MAIN LAYOUT ===== */
+  .page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* ===== SECTION WRAPPER ===== */
+  .section {
+    background: white;
+    border-radius: 24px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.07);
+  }
+
+  .section-header {
+    background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+    padding: 28px 36px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .section-icon {
+    width: 50px; height: 50px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+
+  .section-header h2 {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .section-header p {
+    color: rgba(255,255,255,0.75);
+    font-size: 13px;
+    margin-top: 3px;
+  }
+
+  .section-body {
+    padding: 36px;
+  }
+
+  /* ===== TOC ===== */
+  .toc {
+    background: white;
+    border-radius: 24px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.07);
+  }
+
+  .toc h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--green-dark);
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 3px solid var(--green-pale);
+  }
+
+  .toc-item {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    transition: background 0.2s;
+  }
+
+  .toc-item:hover { background: var(--green-pale); }
+
+  .toc-num {
+    width: 36px; height: 36px;
+    background: var(--green-dark);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    margin-left: 16px;
+    flex-shrink: 0;
+  }
+
+  .toc-title { font-size: 16px; font-weight: 600; color: var(--dark); flex: 1; }
+  .toc-dots { flex: 1; border-bottom: 2px dotted #ddd; margin: 0 12px; }
+  .toc-page { font-size: 13px; color: var(--gray); }
+
+  /* ===== CARDS GRID ===== */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .card {
+    background: var(--green-pale);
+    border-radius: 18px;
+    padding: 24px;
+    border-right: 4px solid var(--green-mid);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(45,155,90,0.15); }
+
+  .card-icon { font-size: 32px; margin-bottom: 12px; }
+  .card h3 { font-size: 16px; font-weight: 700; color: var(--green-dark); margin-bottom: 8px; }
+  .card p { font-size: 13px; color: #555; line-height: 1.7; }
+
+  /* ===== HIGHLIGHT BOX ===== */
+  .highlight-box {
+    background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+    margin: 20px 0;
+  }
+
+  .highlight-box h3 { font-size: 18px; margin-bottom: 12px; color: var(--gold-light); }
+  .highlight-box p, .highlight-box li { font-size: 14px; line-height: 1.9; opacity: 0.9; }
+  .highlight-box ul { padding-right: 20px; }
+
+  /* ===== WARNING BOX ===== */
+  .warning-box {
+    background: linear-gradient(135deg, #fff3cd, #ffeeba);
+    border-radius: 16px;
+    padding: 24px;
+    border-right: 5px solid var(--gold);
+    margin: 20px 0;
+  }
+
+  .warning-box h4 { color: #856404; font-size: 16px; margin-bottom: 8px; }
+  .warning-box p { color: #6c5a02; font-size: 13px; line-height: 1.8; }
+
+  /* ===== SUCCESS BOX ===== */
+  .success-box {
+    background: linear-gradient(135deg, #d4edda, #c3e6cb);
+    border-radius: 16px;
+    padding: 24px;
+    border-right: 5px solid #28a745;
+    margin: 20px 0;
+  }
+
+  .success-box h4 { color: #155724; font-size: 16px; margin-bottom: 8px; }
+  .success-box p, .success-box li { color: #1e5c2d; font-size: 13px; line-height: 1.8; }
+  .success-box ul { padding-right: 18px; }
+
+  /* ===== TABLE ===== */
+  .styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    font-size: 14px;
+  }
+
+  .styled-table thead tr {
+    background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+    color: white;
+  }
+
+  .styled-table th {
+    padding: 16px 20px;
+    text-align: right;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .styled-table td {
+    padding: 14px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: right;
+  }
+
+  .styled-table tbody tr:nth-child(even) { background: var(--green-pale); }
+  .styled-table tbody tr:hover { background: #d8f0e3; }
+  .styled-table .total-row { background: #1a6b3c !important; color: white !important; font-weight: 700; }
+  .styled-table .total-row td { border: none; }
+
+  /* ===== BUDGET BAR ===== */
+  .budget-item {
+    margin-bottom: 18px;
+  }
+  .budget-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .budget-bar-bg {
+    background: #e9ecef;
+    border-radius: 8px;
+    height: 14px;
+    overflow: hidden;
+  }
+  .budget-bar-fill {
+    height: 100%;
+    border-radius: 8px;
+    background: linear-gradient(to left, var(--green-mid), var(--green-light));
+  }
+
+  /* ===== PHASE TIMELINE ===== */
+  .timeline {
+    position: relative;
+    padding-right: 30px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    right: 10px; top: 0; bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--green-mid), var(--green-light));
+    border-radius: 2px;
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 32px;
+    padding-right: 30px;
+  }
+
+  .timeline-dot {
+    position: absolute;
+    right: -21px; top: 6px;
+    width: 20px; height: 20px;
+    background: var(--green-dark);
+    border: 3px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px var(--green-light);
+  }
+
+  .timeline-content {
+    background: var(--green-pale);
+    border-radius: 16px;
+    padding: 20px 24px;
+  }
+
+  .timeline-content h4 {
+    color: var(--green-dark);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .timeline-content p, .timeline-content li {
+    font-size: 13px;
+    color: #444;
+    line-height: 1.8;
+  }
+
+  .timeline-content ul { padding-right: 18px; }
+
+  .phase-badge {
+    display: inline-block;
+    background: var(--green-dark);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 12px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+  }
+
+  /* ===== CHANNELS GRID ===== */
+  .channel-card {
+    border: 2px solid var(--green-pale);
+    border-radius: 18px;
+    padding: 24px;
+    text-align: center;
+    transition: all 0.2s;
+  }
+
+  .channel-card:hover {
+    border-color: var(--green-mid);
+    background: var(--green-pale);
+    transform: translateY(-3px);
+  }
+
+  .channel-card .emoji { font-size: 36px; display: block; margin-bottom: 10px; }
+  .channel-card h4 { font-size: 15px; font-weight: 700; color: var(--green-dark); margin-bottom: 6px; }
+  .channel-card p { font-size: 12px; color: #666; line-height: 1.6; }
+  .channel-card .budget-tag {
+    display: inline-block;
+    background: var(--green-dark);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-top: 10px;
+  }
+
+  /* ===== KPI CARDS ===== */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+  }
+
+  .kpi-card {
+    background: white;
+    border: 2px solid var(--green-pale);
+    border-radius: 18px;
+    padding: 22px 18px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+  }
+
+  .kpi-card .kpi-value {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--green-dark);
+    display: block;
+  }
+
+  .kpi-card .kpi-label {
+    font-size: 12px;
+    color: var(--gray);
+    margin-top: 6px;
+    display: block;
+  }
+
+  .kpi-card .kpi-target {
+    font-size: 11px;
+    color: var(--green-mid);
+    font-weight: 600;
+    margin-top: 4px;
+    display: block;
+  }
+
+  /* ===== AUDIENCE TABLE ===== */
+  .audience-card {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: var(--green-pale);
+    border-radius: 16px;
+    margin-bottom: 14px;
+    align-items: flex-start;
+  }
+
+  .audience-emoji {
+    font-size: 40px;
+    flex-shrink: 0;
+    width: 60px;
+    text-align: center;
+  }
+
+  .audience-info h4 { font-size: 16px; font-weight: 700; color: var(--green-dark); margin-bottom: 4px; }
+  .audience-info .count { font-size: 13px; color: var(--green-mid); font-weight: 600; margin-bottom: 6px; }
+  .audience-info p { font-size: 13px; color: #555; line-height: 1.7; }
+
+  .tag {
+    display: inline-block;
+    background: var(--green-dark);
+    color: white;
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 10px;
+    margin: 3px 2px;
+  }
+
+  /* ===== USP SECTION ===== */
+  .usp-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .usp-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 18px;
+    background: var(--green-pale);
+    border-radius: 14px;
+  }
+
+  .usp-icon {
+    width: 44px; height: 44px;
+    background: var(--green-dark);
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .usp-item h4 { font-size: 14px; font-weight: 700; color: var(--green-dark); margin-bottom: 4px; }
+  .usp-item p { font-size: 12px; color: #555; line-height: 1.6; }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    background: var(--green-dark);
+    color: white;
+    text-align: center;
+    padding: 40px;
+    border-radius: 24px;
+    margin-bottom: 30px;
+  }
+
+  .footer h3 { font-size: 24px; font-weight: 700; margin-bottom: 12px; }
+  .footer p { font-size: 14px; opacity: 0.75; margin-bottom: 20px; }
+  .footer .contact-info { font-size: 15px; opacity: 0.9; }
+
+  /* ===== PRINT ===== */
+  @media print {
+    body { background: white; }
+    .cover { page-break-after: always; min-height: 100vh; }
+    .section { page-break-inside: avoid; }
+    .page { padding: 0; max-width: 100%; }
+  }
+
+  /* ===== INTRO ===== */
+  .intro-text {
+    font-size: 16px;
+    line-height: 2;
+    color: #444;
+    padding: 0 4px;
+  }
+
+  .big-number {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--green-dark);
+    display: block;
+    line-height: 1;
+  }
+
+  .metrics-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 20px 0;
+  }
+
+  .metric-box {
+    background: var(--green-pale);
+    border-radius: 16px;
+    padding: 22px;
+    text-align: center;
+    border-top: 4px solid var(--green-mid);
+  }
+
+  .metric-box .val { font-size: 26px; font-weight: 900; color: var(--green-dark); }
+  .metric-box .lbl { font-size: 12px; color: #666; margin-top: 4px; }
+  .metric-box .note { font-size: 11px; color: var(--green-mid); font-weight: 600; margin-top: 2px; }
+</style>
+</head>
+<body>
+
+<!-- ===== COVER ===== -->
+<div class="cover">
+  <div class="cover-badge">📄 خطة تسويقية استراتيجية • 2026</div>
+  <div class="cover-logo"><span>MP</span></div>
+  <h1>خطة تسويق<br><span>كاسات PLA</span></h1>
+  <div class="cover-divider"></div>
+  <p class="subtitle">استراتيجية متكاملة لاستثمار فرصة حظر البلاستيك في الإمارات</p>
+
+  <div class="cover-stats">
+    <div class="cover-stat">
+      <span class="num">376M$</span>
+      <span class="lbl">حجم سوق الخليج</span>
+    </div>
+    <div class="cover-stat">
+      <span class="num">3.4%</span>
+      <span class="lbl">نمو سنوي للسوق</span>
+    </div>
+    <div class="cover-stat">
+      <span class="num">4</span>
+      <span class="lbl">قطاعات مستهدفة</span>
+    </div>
+    <div class="cover-stat">
+      <span class="num">20K</span>
+      <span class="lbl">ميزانية AED/شهر</span>
+    </div>
+  </div>
+
+  <p class="cover-meta">MaxPrint • الإمارات العربية المتحدة • إبريل 2026</p>
+</div>
+
+<!-- ===== PAGE CONTENT ===== -->
+<div class="page">
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc">
+    <h2>📋 جدول المحتويات</h2>
+    <div class="toc-item">
+      <div class="toc-num">1</div>
+      <span class="toc-title">الفرصة الذهبية — لماذا الآن؟</span>
+      <span class="toc-dots"></span>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">2</div>
+      <span class="toc-title">الميزة التنافسية لـ MaxPrint</span>
+      <span class="toc-dots"></span>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">3</div>
+      <span class="toc-title">تحليل الجمهور المستهدف</span>
+      <span class="toc-dots"></span>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">4</div>
+      <span class="toc-title">الرسالة التسويقية الأساسية</span>
+      <span class="toc-dots"></span>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">5</div>
+      <span class="toc-title">استراتيجية القنوات الرقمية</span>
+      <span class="toc-dots"></span>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">6</div>
+      <span class="toc-title">استراتيجية المبيعات المباشرة</span>
+      <span class="toc-dots"></span>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">7</div>
+      <span class="toc-title">توزيع الميزانية التسويقية</span>
+      <span class="toc-dots"></span>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">8</div>
+      <span class="toc-title">خطة التنفيذ الشهرية (90 يوم)</span>
+      <span class="toc-dots"></span>
+    </div>
+    <div class="toc-item">
+      <div class="toc-num">9</div>
+      <span class="toc-title">مؤشرات الأداء KPIs</span>
+      <span class="toc-dots"></span>
+    </div>
+  </div>
+
+  <!-- SECTION 1: OPPORTUNITY -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🌟</div>
+      <div>
+        <h2>الفرصة الذهبية — لماذا الآن؟</h2>
+        <p>السوق يتحرك لصالحك بشكل لم يحدث من قبل</p>
+      </div>
+    </div>
+    <div class="section-body">
+      <p class="intro-text">
+        في يناير 2026، نفّذت الإمارات <strong>أشمل حظر للبلاستيك أحادي الاستخدام في المنطقة</strong> — شامل الكاسات والأطباق والأكواب البلاستيكية كلياً. هذا يعني أن كل مطعم، كافيه، فندق، وشركة كانت تستخدم كاسات بلاستيكية <strong>مجبورة على إيجاد بديل فوري</strong>. وكاسات PLA هي البديل القانوني والأخلاقي الأول.
+      </p>
+
+      <div class="metrics-row">
+        <div class="metric-box">
+          <div class="val">376M$</div>
+          <div class="lbl">سوق كاسات الخليج 2025</div>
+          <div class="note">↑ 3.4% سنوياً</div>
+        </div>
+        <div class="metric-box">
+          <div class="val">7B$</div>
+          <div class="lbl">إيرادات قطاع الضيافة UAE</div>
+          <div class="note">سيتجاوزها 2026</div>
+        </div>
+        <div class="metric-box">
+          <div class="val">100%</div>
+          <div class="lbl">منتجاتك متوافقة قانونياً</div>
+          <div class="note">PLA معفى من الحظر</div>
+        </div>
+      </div>
+
+      <div class="success-box">
+        <h4>✅ ماذا يعني هذا لـ MaxPrint؟</h4>
+        <ul>
+          <li>موجة طلب ضخمة من العملاء الذين فقدوا مورديهم البلاستيكيين</li>
+          <li>المنافسة على PLA لا تزال منخفضة — نافذة وقت ذهبية لا تتجاوز 12 شهراً</li>
+          <li>فرصة لتحديد نفسك كـ "الخيار الأخضر القانوني الأول" في الإمارات</li>
+          <li>قطاع الفنادق والضيافة يستورد كميات ضخمة ويبحث عن عقود طويلة الأمد</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: COMPETITIVE ADVANTAGE -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🏆</div>
+      <div>
+        <h2>الميزة التنافسية لـ MaxPrint</h2>
+        <p>ما الذي يجعلك مختلفاً عن أي شركة أخرى؟</p>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="usp-grid">
+        <div class="usp-item">
+          <div class="usp-icon">🌱</div>
+          <div>
+            <h4>100% PLA — متوافق مع قانون 2026</h4>
+            <p>كل منتجاتك قابلة للتحلل ومعفاة من الحظر. هذا وحده ميزة لا يملكها أغلب المنافسين بعد.</p>
+          </div>
+        </div>
+        <div class="usp-item">
+          <div class="usp-icon">🎨</div>
+          <div>
+            <h4>طباعة مخصصة لكل عميل</h4>
+            <p>شعار، ألوان، تصميم خاص — بأسعار تنافسية تبدأ من 500 قطعة فقط.</p>
+          </div>
+        </div>
+        <div class="usp-item">
+          <div class="usp-icon">📦</div>
+          <div>
+            <h4>تنوع الأحجام والأشكال</h4>
+            <p>من 4oz للإسبريسو حتى 20oz للمشروبات الكبيرة — ورق وبلاستيك PLA وفروستد.</p>
+          </div>
+        </div>
+        <div class="usp-item">
+          <div class="usp-icon">💰</div>
+          <div>
+            <h4>أسعار تنافسية على الكميات</h4>
+            <p>سعر الحبة ينخفض بشكل ملحوظ مع الكميات — يناسب الطلبات الصغيرة والكبيرة.</p>
+          </div>
+        </div>
+        <div class="usp-item">
+          <div class="usp-icon">🚀</div>
+          <div>
+            <h4>توصيل لكل الإمارات</h4>
+            <p>تغطية شاملة من دبي إلى أبوظبي إلى الإمارات الشمالية.</p>
+          </div>
+        </div>
+        <div class="usp-item">
+          <div class="usp-icon">⚡</div>
+          <div>
+            <h4>طلب رقمي سهل وسريع</h4>
+            <p>موقع احترافي يتيح الطلب أونلاين — سهولة تجربة المستخدم تفوق المنافسين.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="highlight-box" style="margin-top:24px;">
+        <h3>🎯 موقعك في السوق</h3>
+        <p>MaxPrint = "البديل الأخضر المطبوع المخصص الأسرع في الإمارات". هذا هو positioning الذي يجب أن يكون على كل إعلان، كل رسالة، كل محادثة مبيعات.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: TARGET AUDIENCE -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🎯</div>
+      <div>
+        <h2>تحليل الجمهور المستهدف</h2>
+        <p>أربعة قطاعات بحاجة ماسة لمنتجاتك</p>
+      </div>
+    </div>
+    <div class="section-body">
+
+      <div class="audience-card">
+        <div class="audience-emoji">☕</div>
+        <div class="audience-info">
+          <h4>الكافيهات والمقاهي</h4>
+          <div class="count">الأولوية: 🔴 عالية جداً</div>
+          <p>أكبر مستهلك للكاسات المطبوعة في الإمارات. يستهلك الكافيه الواحد 500–5000 كاس شهرياً. الكاس المطبوع هو <strong>واجهة علامتهم التجارية</strong>. الكافيهات الجديدة والسلاسل الصغيرة تبحث دائماً عن موردين موثوقين وبأسعار منافسة.</p>
+          <br>
+          <span class="tag">8oz الأكثر طلباً</span>
+          <span class="tag">12oz للكولد برو</span>
+          <span class="tag">طباعة ألوان</span>
+          <span class="tag">كميات 1000–5000</span>
+        </div>
+      </div>
+
+      <div class="audience-card">
+        <div class="audience-emoji">🍔</div>
+        <div class="audience-info">
+          <h4>المطاعم وCloud Kitchens</h4>
+          <div class="count">الأولوية: 🔴 عالية جداً</div>
+          <p>انتشار Cloud Kitchens في الإمارات كبير جداً. يحتاجون كاسات بلاستيكية PLA للمشروبات الباردة والعصائر. معظمهم يبحثون عن بديل للبلاستيك بعد الحظر وهم الأسرع في اتخاذ القرار لأن العمل يتوقف.</p>
+          <br>
+          <span class="tag">U-Shape للمشروبات الباردة</span>
+          <span class="tag">Frosted للعصائر</span>
+          <span class="tag">16–20oz الأعلى طلباً</span>
+          <span class="tag">كميات 2000–10000</span>
+        </div>
+      </div>
+
+      <div class="audience-card">
+        <div class="audience-emoji">🏨</div>
+        <div class="audience-info">
+          <h4>الفنادق والمنتجعات</h4>
+          <div class="count">الأولوية: 🟡 متوسطة (عقود كبيرة)</div>
+          <p>دورة مبيعات أطول لكن القيمة ضخمة. فندق واحد يشتري عشرات الآلاف شهرياً. يهتمون جداً بالشهادات البيئية وتوافق المنتج مع سياسة الاستدامة الخاصة بهم. العقد مع فندق واحد يعادل 50 كافيه.</p>
+          <br>
+          <span class="tag">شهادات PLA ضرورية</span>
+          <span class="tag">عروض سنوية</span>
+          <span class="tag">كميات 10000+</span>
+          <span class="tag">خصومات خاصة</span>
+        </div>
+      </div>
+
+      <div class="audience-card">
+        <div class="audience-emoji">🎉</div>
+        <div class="audience-info">
+          <h4>الفعاليات والأعراس والشركات</h4>
+          <div class="count">الأولوية: 🟡 متوسطة (موسمية)</div>
+          <p>طلبات موسمية لكنها مربحة جداً. الكاس المطبوع بشعار الشركة أو اسم العروسين عنصر تسويقي فعّال. يبحثون عن جودة عالية وتوصيل سريع وتصميم مميز. كميات 500–2000 عادةً.</p>
+          <br>
+          <span class="tag">طباعة خاصة</span>
+          <span class="tag">كميات صغيرة مقبولة</span>
+          <span class="tag">هدايا وضيافة</span>
+          <span class="tag">موسم رمضان والأعياد</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: MESSAGING -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">💬</div>
+      <div>
+        <h2>الرسالة التسويقية الأساسية</h2>
+        <p>ماذا نقول؟ وكيف نقوله؟</p>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="highlight-box">
+        <h3>🏷️ الرسالة الرئيسية (Main Message)</h3>
+        <p style="font-size:18px; font-weight:700; color:white;">"كاسك هويتك — صديق للبيئة، متوافق مع قانون الإمارات 2026"</p>
+      </div>
+
+      <div style="margin-top:24px;">
+        <div class="cards-grid">
+          <div class="card">
+            <div class="card-icon">🌿</div>
+            <h3>للكافيهات</h3>
+            <p>"كاسات PLA مطبوعة بلوجوك — متوافقة مع حظر البلاستيك، وتعكس هوية براندك أمام كل عميل."</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🚫</div>
+            <h3>للمطاعم</h3>
+            <p>"لا تخاطر بغرامات الحظر — تحوّل الآن لكاسات PLA بنفس الجودة وأسعار تنافسية."</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">⭐</div>
+            <h3>للفنادق</h3>
+            <p>"شريك استدامة موثوق — كاسات PLA معتمدة تعزز سياسة الاستدامة البيئية لمنشأتك."</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🎊</div>
+            <h3>للفعاليات</h3>
+            <p>"اجعل كل كاس قصة — طباعة مخصصة لفعاليتك بأقل كمية 500 قطعة وتوصيل سريع."</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="warning-box" style="margin-top:24px;">
+        <h4>⚡ كلمات يجب أن تكون في كل محتواك</h4>
+        <p><strong>PLA • قابل للتحلل • متوافق مع قانون 2026 • صديق للبيئة • طباعة مخصصة • توصيل لكل الإمارات • أسعار تنافسية • جودة عالية</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 5: DIGITAL CHANNELS -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">📱</div>
+      <div>
+        <h2>استراتيجية القنوات الرقمية</h2>
+        <p>أين تظهر؟ وكيف تنفق ميزانيتك؟</p>
+      </div>
+    </div>
+    <div class="section-body">
+
+      <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px,1fr));">
+
+        <div class="channel-card">
+          <span class="emoji">📸</span>
+          <h4>Instagram & TikTok</h4>
+          <p>محتوى بصري يظهر الكاسات في بيئتها الطبيعية (كافيهات، فعاليات). Reels قصيرة تعرض عملية الطباعة وقبل/بعد. Hashtags بيئية.</p>
+          <span class="budget-tag">6,000 AED/شهر</span>
+        </div>
+
+        <div class="channel-card">
+          <span class="emoji">💼</span>
+          <h4>LinkedIn</h4>
+          <p>استهداف B2B مباشر — مدراء المشتريات، أصحاب المطاعم والفنادق. محتوى عن الاستدامة والامتثال القانوني.</p>
+          <span class="budget-tag">2,000 AED/شهر</span>
+        </div>
+
+        <div class="channel-card">
+          <span class="emoji">🔍</span>
+          <h4>Google Ads</h4>
+          <p>استهداف كلمات مثل "PLA cups Dubai" و"كاسات ورقية مطبوعة الإمارات". أعلى نية شراء.</p>
+          <span class="budget-tag">4,000 AED/شهر</span>
+        </div>
+
+        <div class="channel-card">
+          <span class="emoji">📧</span>
+          <h4>Email Marketing</h4>
+          <p>قائمة بريدية من الكافيهات والمطاعم. حملات شهرية بعروض خاصة وتحديثات المنتجات.</p>
+          <span class="budget-tag">500 AED/شهر</span>
+        </div>
+
+        <div class="channel-card">
+          <span class="emoji">🤝</span>
+          <h4>WhatsApp Business</h4>
+          <p>قناة للعملاء الحاليين والمحتملين. Broadcast لعروض الكميات. رد سريع على الاستفسارات.</p>
+          <span class="budget-tag">مجاناً</span>
+        </div>
+
+        <div class="channel-card">
+          <span class="emoji">🌐</span>
+          <h4>SEO الموقع</h4>
+          <p>تحسين محركات البحث لكلمات PLA cups، sustainable cups UAE، custom printed cups Dubai.</p>
+          <span class="budget-tag">2,000 AED/شهر</span>
+        </div>
+
+      </div>
+
+      <div style="margin-top:32px;">
+        <h3 style="font-size:18px; font-weight:700; color:var(--green-dark); margin-bottom:20px;">📋 خطة المحتوى الأسبوعية</h3>
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>اليوم</th>
+              <th>نوع المحتوى</th>
+              <th>الرسالة</th>
+              <th>المنصة</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>الأحد</strong></td>
+              <td>فيديو عملية الطباعة</td>
+              <td>الجودة والاحترافية</td>
+              <td>Instagram Reels / TikTok</td>
+            </tr>
+            <tr>
+              <td><strong>الثلاثاء</strong></td>
+              <td>صورة كاس في كافيه حقيقي</td>
+              <td>Social Proof</td>
+              <td>Instagram Feed</td>
+            </tr>
+            <tr>
+              <td><strong>الأربعاء</strong></td>
+              <td>بوست تعليمي عن PLA</td>
+              <td>التوعية بالقانون</td>
+              <td>LinkedIn + Instagram</td>
+            </tr>
+            <tr>
+              <td><strong>الخميس</strong></td>
+              <td>عرض خاص أو تخفيض</td>
+              <td>دفع الشراء</td>
+              <td>Instagram Stories</td>
+            </tr>
+            <tr>
+              <td><strong>الجمعة</strong></td>
+              <td>قصة نجاح عميل</td>
+              <td>بناء الثقة</td>
+              <td>كل المنصات</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 6: DIRECT SALES -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🤝</div>
+      <div>
+        <h2>استراتيجية المبيعات المباشرة</h2>
+        <p>B2B Sales — الطريق الأسرع للعقود الكبيرة</p>
+      </div>
+    </div>
+    <div class="section-body">
+
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon">🗺️</div>
+          <h3>خريطة العملاء</h3>
+          <p>ابنِ قاعدة بيانات بكل الكافيهات والمطاعم في دبي وأبوظبي من Google Maps. ابدأ بالمناطق الأعلى كثافة: JBR, Business Bay, DIFC, Downtown, Al Reem Island.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📞</div>
+          <h3>Cold Outreach</h3>
+          <p>رسائل WhatsApp أو اتصالات مباشرة بمدير المشتريات. الرسالة: "تحوّل لـ PLA قبل الغرامة". أرسل عينة مجانية لأول 50 عميل.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎁</div>
+          <h3>عينات مجانية</h3>
+          <p>100 كاس مطبوع بشعار العميل مجاناً. هذا الاستثمار الأصغر يحول 30–40% من المجربين لعملاء. تكلفة العينة أقل بكثير من تكلفة إعلان.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📜</div>
+          <h3>عقود سنوية</h3>
+          <p>قدّم خصم 10–15% مقابل عقد سنوي. يضمن لك تدفق نقدي ثابت ويضمن للعميل السعر وضمان التوريد طوال السنة.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box" style="margin-top:24px;">
+        <h3>🏢 استراتيجية الفنادق (High-Value Accounts)</h3>
+        <ul>
+          <li>حضّر Presentation احترافية تشرح التزام MaxPrint بالاستدامة وشهادات PLA</li>
+          <li>استهدف مدير المشتريات ومدير الاستدامة معاً</li>
+          <li>قدّم نموذج عينة مع شهادة التحلل البيولوجي</li>
+          <li>عرض خاص: أول طلب بخصم 20% مع ضمان أوقات التوريد</li>
+          <li>استخدم LinkedIn للوصول المباشر للقرار</li>
+        </ul>
+      </div>
+
+      <div style="margin-top:24px;">
+        <h3 style="font-size:18px; font-weight:700; color:var(--green-dark); margin-bottom:16px;">📊 مسار المبيعات المقترح</h3>
+        <table class="styled-table">
+          <thead>
+            <tr><th>المرحلة</th><th>الإجراء</th><th>الهدف الشهري</th><th>معدل التحويل</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Awareness</td><td>إعلانات + محتوى</td><td>5,000 مشاهدة</td><td>—</td></tr>
+            <tr><td>Interest</td><td>زيارة الموقع / رسالة</td><td>300 زيارة</td><td>6%</td></tr>
+            <tr><td>Consideration</td><td>طلب عينة / استفسار</td><td>60 استفسار</td><td>20%</td></tr>
+            <tr><td>Decision</td><td>عرض سعر</td><td>25 عرض</td><td>40%</td></tr>
+            <tr><td>Purchase</td><td>إغلاق الصفقة</td><td>10 عملاء جدد</td><td>40%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 7: BUDGET -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">💰</div>
+      <div>
+        <h2>توزيع الميزانية التسويقية</h2>
+        <p>15,000 AED شهرياً — كل درهم في مكانه الصحيح</p>
+      </div>
+    </div>
+    <div class="section-body">
+
+      <div class="budget-item">
+        <div class="budget-label">
+          <span>📸 إعلانات Instagram & TikTok</span>
+          <span style="color:var(--green-dark); font-weight:700;">6,000 AED (40%)</span>
+        </div>
+        <div class="budget-bar-bg"><div class="budget-bar-fill" style="width:40%"></div></div>
+      </div>
+
+      <div class="budget-item">
+        <div class="budget-label">
+          <span>🔍 Google Ads (Search)</span>
+          <span style="color:var(--green-dark); font-weight:700;">4,000 AED (27%)</span>
+        </div>
+        <div class="budget-bar-bg"><div class="budget-bar-fill" style="width:27%"></div></div>
+      </div>
+
+      <div class="budget-item">
+        <div class="budget-label">
+          <span>🌐 SEO + تحسين الموقع</span>
+          <span style="color:var(--green-dark); font-weight:700;">2,000 AED (13%)</span>
+        </div>
+        <div class="budget-bar-bg"><div class="budget-bar-fill" style="width:13%"></div></div>
+      </div>
+
+      <div class="budget-item">
+        <div class="budget-label">
+          <span>💼 LinkedIn Ads</span>
+          <span style="color:var(--green-dark); font-weight:700;">2,000 AED (13%)</span>
+        </div>
+        <div class="budget-bar-bg"><div class="budget-bar-fill" style="width:13%"></div></div>
+      </div>
+
+      <div class="budget-item">
+        <div class="budget-label">
+          <span>🎁 عينات مجانية للعملاء الجدد</span>
+          <span style="color:var(--green-dark); font-weight:700;">500 AED (3%)</span>
+        </div>
+        <div class="budget-bar-bg"><div class="budget-bar-fill" style="width:3%"></div></div>
+      </div>
+
+      <div class="budget-item">
+        <div class="budget-label">
+          <span>📧 Email + WhatsApp Marketing</span>
+          <span style="color:var(--green-dark); font-weight:700;">500 AED (4%)</span>
+        </div>
+        <div class="budget-bar-bg"><div class="budget-bar-fill" style="width:4%"></div></div>
+      </div>
+
+      <div style="margin-top:28px;">
+        <table class="styled-table">
+          <thead>
+            <tr><th>القناة</th><th>الميزانية الشهرية</th><th>العائد المتوقع</th><th>الأولوية</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Instagram & TikTok Ads</td><td>6,000 AED</td><td>Brand awareness + عملاء جدد</td><td>🔴 عالية</td></tr>
+            <tr><td>Google Ads Search</td><td>4,000 AED</td><td>طلبات مباشرة (نية شراء)</td><td>🔴 عالية</td></tr>
+            <tr><td>SEO + موقع</td><td>2,000 AED</td><td>ترافيك عضوي طويل الأمد</td><td>🟡 متوسطة</td></tr>
+            <tr><td>LinkedIn Ads</td><td>2,000 AED</td><td>عملاء B2B وفنادق</td><td>🟡 متوسطة</td></tr>
+            <tr><td>عينات + بريد + واتساب</td><td>1,000 AED</td><td>تحويل مستفسرين لعملاء</td><td>🟢 منخفضة</td></tr>
+            <tr class="total-row"><td><strong>المجموع</strong></td><td><strong>15,000 AED</strong></td><td><strong>10-15 عميل جديد/شهر</strong></td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 8: 90-DAY PLAN -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">📅</div>
+      <div>
+        <h2>خطة التنفيذ — 90 يوماً</h2>
+        <p>من اليوم الأول حتى النتائج الملموسة</p>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="phase-badge">الشهر الأول — الأساس</span>
+            <h4>🔧 بناء الأساس التسويقي</h4>
+            <ul>
+              <li>تحديث الموقع: إبراز "PLA" و"متوافق مع قانون 2026" في الصفحة الرئيسية بشكل واضح وكبير</li>
+              <li>إنشاء صفحة هبوط (Landing Page) مخصصة لكل قطاع: كافيهات، مطاعم، فنادق</li>
+              <li>تصوير منتجات احترافي (15–20 صورة + 3 فيديوهات قصيرة)</li>
+              <li>إعداد حساب Google Ads وبدء حملة بـ 2,000 AED للاختبار</li>
+              <li>تجهيز قائمة 200 كافيه ومطعم للتواصل المباشر</li>
+              <li>إرسال 50 عينة مجانية للعملاء المختارين</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="phase-badge">الشهر الثاني — الانطلاق</span>
+            <h4>🚀 تشغيل الحملات بكامل قوتها</h4>
+            <ul>
+              <li>إطلاق حملة Instagram + TikTok بالميزانية الكاملة 6,000 AED</li>
+              <li>نشر أول 12 قطعة محتوى (فيديوهات + صور + بوستات تعليمية)</li>
+              <li>بدء حملة LinkedIn لاستهداف مدراء المشتريات في الفنادق</li>
+              <li>متابعة العينات المرسلة وإغلاق أول 5 صفقات</li>
+              <li>إعداد Newsletter شهرية وإطلاق أول نشرة</li>
+              <li>تحليل نتائج الشهر الأول وتعديل الإعلانات</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="phase-badge">الشهر الثالث — القصاد</span>
+            <h4>💰 تحويل الزخم لعملاء وعقود</h4>
+            <ul>
+              <li>إطلاق برنامج إحالة: عميل يجيب بعميل يحصل على خصم 10%</li>
+              <li>المشاركة في Gulfood أو Horeca Exhibition إن كان متاحاً</li>
+              <li>تفعيل عروض كميات الصيف والمناسبات القادمة</li>
+              <li>استهداف فنادق بعروض عقود سنوية</li>
+              <li>مراجعة شاملة لكل الحملات وتحسين المحتوى الأعلى أداءً</li>
+              <li>هدف: 15 عميل جديد + 3 عقود سنوية على الأقل</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 9: KPIs -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">📊</div>
+      <div>
+        <h2>مؤشرات الأداء الرئيسية (KPIs)</h2>
+        <p>كيف تعرف أنك على الطريق الصحيح؟</p>
+      </div>
+    </div>
+    <div class="section-body">
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <span class="kpi-value">10+</span>
+          <span class="kpi-label">عميل جديد</span>
+          <span class="kpi-target">كل شهر</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-value">3</span>
+          <span class="kpi-label">عقود سنوية</span>
+          <span class="kpi-target">خلال 90 يوم</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-value">5K+</span>
+          <span class="kpi-label">متابع جديد</span>
+          <span class="kpi-target">خلال 90 يوم</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-value">3%+</span>
+          <span class="kpi-label">معدل تحويل الموقع</span>
+          <span class="kpi-target">من زائر لمستفسر</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-value">400%</span>
+          <span class="kpi-label">ROAS مستهدف</span>
+          <span class="kpi-target">عائد الإعلانات</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-value">&lt;15</span>
+          <span class="kpi-label">دقيقة رد</span>
+          <span class="kpi-target">على الاستفسارات</span>
+        </div>
+      </div>
+
+      <div style="margin-top:28px;">
+        <table class="styled-table">
+          <thead>
+            <tr><th>المؤشر</th><th>الشهر 1</th><th>الشهر 2</th><th>الشهر 3</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>عملاء جدد</td><td>5</td><td>10</td><td>15</td></tr>
+            <tr><td>مبيعات شهرية (AED)</td><td>30,000</td><td>60,000</td><td>100,000</td></tr>
+            <tr><td>متابعون سوشيال</td><td>+1,000</td><td>+2,500</td><td>+5,000</td></tr>
+            <tr><td>استفسارات شهرية</td><td>30</td><td>60</td><td>100</td></tr>
+            <tr><td>معدل إغلاق الصفقات</td><td>30%</td><td>40%</td><td>50%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <h3>🌱 MaxPrint — الشريك الأخضر الموثوق في الإمارات</h3>
+    <p>هذه الخطة مبنية على بيانات سوق حقيقية ومصممة خصيصاً لفرصة PLA في الإمارات 2026</p>
+    <div class="cover-divider" style="margin:16px auto;"></div>
+    <p class="contact-info">maxprint.ae | الإمارات العربية المتحدة | 2026</p>
+  </div>
+
+</div>
+</body>
+</html>
